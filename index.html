@@ -168,6 +168,76 @@
     </div>
 </div>
 
+        <!-- VITALS / MÉTRICAS -->
+    <div class="card">
+        <div class="card-title"><i class="fas fa-heartbeat"></i> Vitals & Métricas</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px;">
+            <div style="text-align: center; padding: 12px; background: rgba(47, 129, 247, 0.05); border-radius: 6px;">
+                <div style="font-size: 24px; font-weight: bold; color: var(--accent-blue);">9.240</div>
+                <div style="font-size: 11px; color: var(--text-dim);">passos hoje</div>
+            </div>
+            <div style="text-align: center; padding: 12px; background: rgba(63, 185, 80, 0.05); border-radius: 6px;">
+                <div style="font-size: 24px; font-weight: bold; color: var(--accent-green);">7.5h</div>
+                <div style="font-size: 11px; color: var(--text-dim);">sono último ciclo</div>
+            </div>
+        </div>
+        <div style="font-size: 12px; color: var(--text-dim); margin-top: 8px;">FC: 68 bpm | HRV: 54ms | Hidratação: 1.9L</div>
+    </div>
+
+    <!-- AGENDA SEMANAL -->
+    <div class="card">
+        <div class="card-title"><i class="fas fa-calendar-alt"></i> Agenda Semanal</div>
+        <div style="font-size: 13px; margin-bottom: 8px;">
+            <div style="padding: 8px; border-left: 3px solid var(--accent-blue); margin-bottom: 6px; background: rgba(47, 129, 247, 0.05);">
+                <strong>08:00</strong> — Bloco de leitura crítica<br>
+                <span style="font-size: 11px; color: var(--text-dim);">RCT low-carb em DM2 · deep work</span>
+            </div>
+            <div style="padding: 8px; border-left: 3px solid var(--accent-green); margin-bottom: 6px; background: rgba(63, 185, 80, 0.05);">
+                <strong>10:30</strong> — Consulta – Ana M.<br>
+                <span style="font-size: 11px; color: var(--text-dim);">Teleconsulta · ajuste de plano alimentar</span>
+            </div>
+        </div>
+        <a href="#" class="btn-active" style="font-size: 12px;"><span>Ver agenda completa</span><i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- INBOX CRÍTICO -->
+    <div class="card">
+        <div class="card-title"><i class="fas fa-inbox"></i> Inbox Crítico <span class="tag tag-active" style="margin-left: 8px;">4</span></div>
+        <div style="font-size: 13px;">
+            <div style="padding: 8px; margin-bottom: 6px; border: 1px solid var(--border); border-radius: 4px; background: rgba(245, 158, 11, 0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong>Paciente Ana M.</strong>
+                        <span class="tag" style="background: #f59e0b; color: #000; margin-left: 6px;">URGENTE</span>
+                    </div>
+                </div>
+                <div style="font-size: 11px; color: var(--text-dim); margin-top: 4px;">Re: hipoglicemias noturnas – revisão de plano</div>
+            </div>
+            <div style="padding: 8px; margin-bottom: 6px; border: 1px solid var(--border); border-radius: 4px;">
+                <strong>Editor Viver Bem</strong><br>
+                <div style="font-size: 11px; color: var(--text-dim);">Pauta sarcopenia – prazo sexta-feira</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJETO ATIVO -->
+    <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-title"><i class="fas fa-project-diagram"></i> Projeto Ativo: Curso Engenharia de Prompts</div>
+        <div style="display: flex; gap: 16px; align-items: center;">
+            <div style="flex: 1;">
+                <div style="font-size: 13px; margin-bottom: 8px;">Conteúdo · exemplos · templates</div>
+                <div style="background: rgba(47, 129, 247, 0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 60%; height: 100%; background: var(--accent-blue);"></div>
+                </div>
+                <div style="font-size: 11px; color: var(--text-dim); margin-top: 4px;">Progresso: 60% completo</div>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 11px; color: var(--text-dim);">Próxima tarefa:</div>
+                <div style="font-size: 13px;">Gravar módulo 3</div>
+            </div>
+        </div>
+    </div>
+
 <script>
     function updateClock() {
         const now = new Date();
