@@ -58,9 +58,21 @@
             margin-top: 10px;
             cursor: pointer;
             transition: 0.3s;
+            text-decoration: none;
+            display: block;
+            color: var(--text-primary);
         }
         .active-function:hover {
             background: rgba(56, 189, 248, 0.2);
+        }
+        .tag-special {
+            font-size: 0.7em;
+            background: var(--warning);
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -84,28 +96,32 @@
                 <strong>Próximo Paciente:</strong> João Silva (14:30)
                 <div style="font-size: 0.8em; color: var(--text-secondary)">Protocolo: Hipertrofia Masculina</div>
             </div>
-            <div class="active-function">Abrir Prontuário Digital</div>
+            <a href="#" class="active-function">Abrir Prontuário Digital</a>
+            <a href="#" class="active-function">Pipeline de Atendimento (Fluxos 1-4)</a>
         </div>
 
-        <!-- Card 2: Calculadoras Metabólicas -->
+        <!-- Card 2: Ferramentas Ativas -->
         <div class="card">
             <div class="card-header"><i class="fas fa-calculator"></i> Ferramentas Ativas</div>
-            <div class="active-function">Calculadora TDEE / GCD</div>
-            <div class="active-function">Bioimpedância vs Adipometria</div>
+            <a href="#" class="active-function">Calculadora TDEE / GCD</a>
+            <a href="#" class="active-function">Bioimpedância vs Adipometria</a>
+            <a href="#" class="active-function">Skill: "parceiro-cetico" <span class="tag-special">Active</span></a>
         </div>
 
-        <!-- Card 3: Prompts e IA -->
+        <!-- Card 3: Central de Prompts IA -->
         <div class="card">
             <div class="card-header"><i class="fas fa-robot"></i> Central de Prompts IA</div>
-            <div class="active-function">Gerar Dieta Base (Persona)</div>
-            <div class="active-function">Análise de Exames Laboratoriais</div>
+            <a href="#" class="active-function">Gerar Dieta Base (Persona)</a>
+            <a href="#" class="active-function">Análise de Exames Laboratoriais</a>
+            <a href="#" class="active-function">Depuração TikZ (Fluxogramas)</a>
         </div>
 
-        <!-- Card 4: Conteúdo e Ciência -->
+        <!-- Card 4: Scientific Hub -->
         <div class="card">
             <div class="card-header"><i class="fas fa-book-medical"></i> Scientific Hub</div>
-            <div class="active-function">Pesquisar no PubMed</div>
-            <div class="active-function">Insights do Instagram (Novos)</div>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" class="active-function">Pesquisar no PubMed</a>
+            <a href="#" class="active-function">Insights do Instagram (Novos)</a>
+            <a href="#" class="active-function">Revisão Literária Sistematizada</a>
         </div>
     </div>
 
