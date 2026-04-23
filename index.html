@@ -1,13 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rafael OS – Dashboard Clínico v2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael OS - Dashboard Clínico</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --success: #22c55e;
+            --warning: #f59e0b;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #334155;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .active-function {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--accent);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .active-function:hover {
+            background: rgba(56, 189, 248, 0.2);
+        }
+    </style>
 </head>
 <body>
-<h1>Rafael OS – Dashboard Clínico</h1>
-<p>Dashboard base criado. Aguardando código completo.</p>
-<p>Para editar: acesse o repositório e clique no botão de edição (lápis) do index.html</p>
+    <header class="dashboard-header">
+        <div>
+            <h1 style="margin:0;">Rafael OS <span style="color:var(--accent)">Dashboard Clínico</span></h1>
+            <p style="color:var(--text-secondary)">Gestão de Atendimento e Conteúdo</p>
+        </div>
+        <div style="text-align: right">
+            <div id="clock" style="font-size: 1.2em; font-weight: bold;">00:00:00</div>
+            <div style="color:var(--text-secondary)">Brasília, DF</div>
+        </div>
+    </header>
+
+    <div class="grid-container">
+        <!-- Card 1: Atendimento Clínico -->
+        <div class="card">
+            <div class="card-header"><i class="fas fa-user-md"></i> Atendimento Clínico</div>
+            <div class="active-function">
+                <strong>Próximo Paciente:</strong> João Silva (14:30)
+                <div style="font-size: 0.8em; color: var(--text-secondary)">Protocolo: Hipertrofia Masculina</div>
+            </div>
+            <div class="active-function">Abrir Prontuário Digital</div>
+        </div>
+
+        <!-- Card 2: Calculadoras Metabólicas -->
+        <div class="card">
+            <div class="card-header"><i class="fas fa-calculator"></i> Ferramentas Ativas</div>
+            <div class="active-function">Calculadora TDEE / GCD</div>
+            <div class="active-function">Bioimpedância vs Adipometria</div>
+        </div>
+
+        <!-- Card 3: Prompts e IA -->
+        <div class="card">
+            <div class="card-header"><i class="fas fa-robot"></i> Central de Prompts IA</div>
+            <div class="active-function">Gerar Dieta Base (Persona)</div>
+            <div class="active-function">Análise de Exames Laboratoriais</div>
+        </div>
+
+        <!-- Card 4: Conteúdo e Ciência -->
+        <div class="card">
+            <div class="card-header"><i class="fas fa-book-medical"></i> Scientific Hub</div>
+            <div class="active-function">Pesquisar no PubMed</div>
+            <div class="active-function">Insights do Instagram (Novos)</div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString('pt-BR');
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
 </html>
